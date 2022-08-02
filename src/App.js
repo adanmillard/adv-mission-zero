@@ -1,7 +1,7 @@
 import { Header } from "./Components/Header/Header";
 import { Search } from "./Components/Search/Search";
 import { Cards } from "./Components/Cards/Cards";
-import "./app.css";
+import "./App.css";
 
 function App() {
   return (
