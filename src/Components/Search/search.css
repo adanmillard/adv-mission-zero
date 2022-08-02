@@ -42,7 +42,8 @@ input:focus {
   border: none;
   text-align: center;
   text-decoration: none;
-  background-color: rgb(255, 22, 22);
+  background-color: #0890c4;
+  color: white;
 }
 
 .blurb {
@@ -55,8 +56,8 @@ input:focus {
 }
 
 .confidence {
-  color: rgb(255, 22, 22);
-  font-family: "Crimson Pro", serif;
+  color: #0890c4;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 3rem;
   margin: 0;
