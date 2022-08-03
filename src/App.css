@@ -8,3 +8,9 @@ button {
   font-family: "Montserrat", sans-serif;
   margin: 0;
 }
+
+/* Easy way to debug css. 
+
+* {
+  outline: solid green 1px;
+} */

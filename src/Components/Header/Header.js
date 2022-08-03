@@ -1,7 +1,7 @@
 import React from "react";
 import "./header.css";
 
-export const Header = () => {
+export const Header = ({ setOpenModal }) => {
   return (
     <div className="header-main-container">
       <div className="header-img-container">
@@ -17,7 +17,12 @@ export const Header = () => {
           <button className="header-btn one">Auctions</button>
           <button className="header-btn two">Sell</button>
           <button className="header-btn three">Contact</button>
-          <button className="header-login-btn">Login</button>
+          <button
+            className="header-login-btn"
+            onClick={() => setOpenModal(true)}
+          >
+            Login
+          </button>
         </div>
         <i class="bi bi-list"></i>
       </div>

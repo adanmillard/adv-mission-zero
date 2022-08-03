@@ -1,7 +1,7 @@
 import React from "react";
 import "./search.css";
 
-export const Search = () => {
+export const Search = ({ setSearch }) => {
   return (
     <div className="search-background-img">
       <div className="search-main-container">
@@ -12,7 +12,12 @@ export const Search = () => {
           </h2>
         </div>
         <div className="search-input-container">
-          <input type="text"></input>
+          <input
+            type="text"
+            onChange={(e) => {
+              setSearch(e.target.value);
+            }}
+          ></input>
           <button className="search-btn">SEARCH</button>
         </div>
       </div>
