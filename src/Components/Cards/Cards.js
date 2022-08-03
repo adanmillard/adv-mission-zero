@@ -7,13 +7,7 @@ export const Cards = ({ search }) => {
     <div className="cards-flex-main-container">
       {cardsInformation
         .filter((information) => {
-          if (search === "") {
-            return information;
-          } else if (
-            information.name.toLowerCase().includes(search.toLowerCase())
-          ) {
-            return information;
-          }
+          return information.name.toLowerCase().includes(search.toLowerCase());
         })
         .map((information, i) => {
           return (
