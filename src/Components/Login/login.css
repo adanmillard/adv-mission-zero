@@ -10,13 +10,17 @@
 }
 
 .modal-container {
-  width: 50%;
+  width: 65%;
   height: 60%;
   background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-image: url("https://images.unsplash.com/photo-1560611811-8a87a5239655?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8YmxhY2slMjBhbmQlMjB3aGl0ZSUyMGNhcnxlbnwwfHwwfHw%3D&w=1000&q=80");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .close-btn {
@@ -29,16 +33,53 @@
   border: none;
   text-align: center;
   text-decoration: none;
-  background-color: white;
-  color: black;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
 }
 
 .modal-content {
   width: 90%;
   height: 90%;
-  outline: 1px solid green;
+  /* outline: 1px solid green; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.login-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: white;
+}
+
+.modal-input {
+  text-align: center;
+  padding: 10px 50px;
+  margin-bottom: 5%;
+}
+
+.login-btn {
+  padding: 16px 50px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  background-color: #0890c4;
+  color: white;
+}
+
+.modal-footer {
+  margin-bottom: 10%;
+}
+
+@media only screen and (max-width: 699px) {
+  .modal-container {
+    width: 85%;
+    height: 60%;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .modal-input {
+    padding: 10px 30px;
+  }
 }

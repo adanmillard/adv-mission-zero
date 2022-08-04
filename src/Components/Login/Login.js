@@ -17,18 +17,18 @@ export const Login = ({ closeModal }) => {
         </div>
         <div className="modal-content">
           <div className="modal-title">
-            <h1>Login</h1>
+            <h1 className="login-title">Login</h1>
           </div>
           <div className="modal-body">
             <div>
-              <input></input>
+              <input className="modal-input" placeholder="Username"></input>
             </div>
             <div>
-              <input></input>
+              <input className="modal-input" placeholder="Password"></input>
             </div>
           </div>
           <div className="modal-footer">
-            <button>Login</button>
+            <button className="login-btn">Login</button>
           </div>
         </div>
       </div>

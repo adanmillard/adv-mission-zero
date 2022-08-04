@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
+import { Dropdown } from "../DropDown/Dropdown";
 import "./header.css";
 
 export const Header = ({ setOpenModal }) => {
+  const [open, setOpen] = useState(false);
+
+  const toggle = () => {
+    setOpen(!open);
+  };
+
   return (
     <div className="header-main-container">
       <div className="header-img-container">
@@ -24,7 +31,8 @@ export const Header = ({ setOpenModal }) => {
             Login
           </button>
         </div>
-        <i class="bi bi-list"></i>
+        <i className="bi bi-list" onClick={() => toggle()}></i>
+        {open && <Dropdown setOpenModal={setOpenModal} toggle={toggle} />}
       </div>
     </div>
   );
