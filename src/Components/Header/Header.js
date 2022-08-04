@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import { Dropdown } from "../DropDown/Dropdown";
 import "./header.css";
 
 export const Header = ({ setOpenModal }) => {
-  const [open, setOpen] = useState(false);
+  const [active, setActive] = useState(false);
 
   const toggle = () => {
-    setOpen(!open);
+    setActive(!active);
   };
 
   return (
@@ -20,20 +19,54 @@ export const Header = ({ setOpenModal }) => {
         <h2 className="company-name">N1 LUXURY VEHICLES</h2>
       </div>
       <div className="header-button-container">
-        <div className="header-btns">
-          <button className="header-btn one">Auctions</button>
-          <button className="header-btn two">Sell</button>
-          <button className="header-btn three">Contact</button>
+        <div className={active ? "header-btns active" : "header-btns"}>
+          <button
+            className="header-btn one"
+            onClick={() => {
+              toggle();
+            }}
+          >
+            Auctions
+          </button>
+          <button
+            className="header-btn two"
+            onClick={() => {
+              toggle();
+            }}
+          >
+            Sell
+          </button>
+          <button
+            className="header-btn three"
+            onClick={() => {
+              toggle();
+            }}
+          >
+            Contact
+          </button>
           <button
             className="header-login-btn"
-            onClick={() => setOpenModal(true)}
+            onClick={() => {
+              setOpenModal(true);
+              toggle();
+            }}
           >
             Login
           </button>
         </div>
-        <i className="bi bi-list" onClick={() => toggle()}></i>
-        {open && <Dropdown setOpenModal={setOpenModal} toggle={toggle} />}
+        <div
+          className={active ? "hamburger active" : "hamburger"}
+          onClick={() => {
+            toggle();
+          }}
+        >
+          <span className="bar"></span>
+          <span className="bar"></span>
+          <span className="bar"></span>
+        </div>
       </div>
     </div>
   );
 };
+
+// {open && <Dropdown setOpenModal={setOpenModal} toggle={toggle} />}
