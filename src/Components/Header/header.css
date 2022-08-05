@@ -46,6 +46,10 @@
   font-size: 16px;
 }
 
+.header-btn:hover {
+  color: #0890c4;
+}
+
 .header-login-btn {
   background-color: white;
   padding: 5px 30px;
