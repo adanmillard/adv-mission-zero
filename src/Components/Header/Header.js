@@ -68,5 +68,3 @@ export const Header = ({ setOpenModal }) => {
     </div>
   );
 };
-
-// {open && <Dropdown setOpenModal={setOpenModal} toggle={toggle} />}

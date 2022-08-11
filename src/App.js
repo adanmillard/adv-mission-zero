@@ -4,6 +4,7 @@ import { Cards } from "./Components/Cards/Cards";
 import { Login } from "./Components/Login/Login";
 import { useState } from "react";
 import "./App.css";
+import Chatbot from "./Components/ChatBot/Chatbot";
 
 function App() {
   const [search, setSearch] = useState("");
@@ -15,6 +16,7 @@ function App() {
       <Header setOpenModal={setOpenModal} />
       <Search setSearch={setSearch} />
       <Cards search={search} />
+      <Chatbot />
     </div>
   );
 }
