@@ -5,7 +5,7 @@ const Chatbot = () => {
     <div>
       <df-messenger
         intent="WELCOME"
-        chat-title="TurnersFAQ"
+        chat-title="Turner"
         agent-id="19e38537-3ead-48ce-bc34-171a6f1b70be"
         language-code="en"
       ></df-messenger>
